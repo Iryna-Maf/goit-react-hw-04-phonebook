@@ -1,0 +1,35 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup {
+  margin: 15px 0 15px 15px;
+  align-items: center;
+}
+
+.label {
+  font-size: 20px;
+  color: darkblue;
+  font-weight: 700;
+}
+
+.input {
+  padding: 10px 10px;
+  width: 400px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #5555ff;
+  cursor: pointer;
+  padding: 10px 15px;
+  border: 3px solid #0000ff;
+  border-radius: 5px;
+  color: black;
+}
+
+.btn:hover,
+:focus {
+  background-color: #0000ff;
+}
