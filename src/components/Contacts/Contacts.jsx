@@ -22,9 +22,9 @@ const Contacts = ({ items, removeContact }) => {
 
 export default Contacts;
 
-Contacts.defaultProps = {
-  items: [],
-};
+// Contacts.defaultProps = {
+//   items: [],
+// };
 
 Contacts.propTypes = {
   items: PropTypes.arrayOf(
