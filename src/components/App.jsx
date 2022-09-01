@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 
 import FormAddPhone from './FormAddPhone/FormAddPhone';
@@ -6,7 +6,7 @@ import Contacts from './Contacts/Contacts';
 
 import s from './App.module.css';
 
-const App = () => {
+function App() {
   const [phoneList, setPhoneList] = useState(() => {
     return (
       JSON.parse(localStorage.getItem('phoneList')) ?? [
@@ -63,6 +63,10 @@ const App = () => {
     return filteredContacts;
   };
 
+  useEffect(() => {
+    localStorage.setItem('phoneList', JSON.stringify(phoneList));
+  }, [phoneList]);
+
   const filteredContacts = getFilteredContacts();
 
   return (
@@ -85,7 +89,7 @@ const App = () => {
       </div>
     </div>
   );
-};
+}
 
 // class App extends Component {
 //   state = {
